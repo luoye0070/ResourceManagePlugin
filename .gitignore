@@ -1,0 +1,12 @@
+target/
+test/
+.idea/
+.classpath
+.project
+application.properties
+ResourceManagePlugin.iml
+ResourceManagePlugin-grailsPlugins.iml
+workspace.xml
+grails-resource-manage-plugin-*.zip
+web-app/ffmpeg/
+web-app/uploadFile/

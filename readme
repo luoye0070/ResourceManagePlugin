@@ -1,2 +1,20 @@
 1、由于在ResourceManagePluginGrailsPlugin排除了所用的的jar包，所以请添加依赖的jar包
  json-simple-1.1.jar
+ 2、由于在ResourceManagePluginGrailsPlugin排除了所用的ffmpeg程序,所以请在web-app/ffmpeg/下添加依赖的ffmpeg程序，程序文件名格式如下：
+  ffmpeg_win32.exe
+  ffmpeg_win64.exe
+  ffprobe_win32.exe
+  ffprobe_win64.exe
+  ffmpeg_mac_intel64
+  ffprobe_mac_intel64
+  ffmpeg_mac32
+  ffprobe_mac32
+  ffmpeg_mac64
+  ffprobe_mac64
+  ffmpeg_linux64
+  ffprobe_linux64
+  ffmpeg_linux32
+  ffprobe_linux32
+  ffmpeg_linux64
+  ffprobe_linux64
+根据服务器的操作系统选择ffmpeg和ffprobe的版本

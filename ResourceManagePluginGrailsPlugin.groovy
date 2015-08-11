@@ -6,7 +6,8 @@ class ResourceManagePluginGrailsPlugin {
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
             "grails-app/views/error.gsp",
-            "lib/**"
+            "lib/**",
+            "web-app/ffmpeg/**"
     ]
 
     // TODO Fill in these fields

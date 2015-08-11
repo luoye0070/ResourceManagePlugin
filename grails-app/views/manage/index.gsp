@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>后台管理</title>
+    <title>资源管理</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="Shortcut Icon" href="${resource(dir: 'images', file: 'favicon_picc.ico')}"/>
     <link href="${resource(dir: 'js/bui/css', file: 'dpl-min.css')}" rel="stylesheet" type="text/css"/>
@@ -11,7 +11,7 @@
 
 <body>
 <div class="header">
-    <div class="dl-title"><span class="">幸福企业网站后台</span></div>
+    <div class="dl-title"><span class="">资源管理</span></div>
 
         <div class="dl-log">欢迎您，<span class="dl-log-user"></span>
             %{--<a href="${createLink(controller:'logout',action:'index')}" title="退出系统" class="dl-log-quit">[退出]</a>--}%

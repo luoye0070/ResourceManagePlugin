@@ -97,13 +97,13 @@ class ResourceFileController {
         render(view: "/manage/resourceFile/upload", model: [isSaveOk:isSaveOk,success: success, errors: errors]);
     }
     def diyUploadPage(){
-        long fileLimitSize = 100;
+        long fileLimitSize = 100*1024*1024;
         String maxSizeStr=grailsApplication.config.grails.resouce.maxsize;
         if(maxSizeStr){
             try {
                 fileLimitSize=Long.parseLong(maxSizeStr);
             }catch (Exception ex){
-                ex.printStackTrace();
+                //ex.printStackTrace();
             }
         }
         //fileLimitSize=fileLimitSize+1;

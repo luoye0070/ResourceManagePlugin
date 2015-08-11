@@ -148,6 +148,7 @@ class OneTagTagLib {
             throwTagError("Tag [paginate] is missing required attribute [total]")
         }
         String urlStr = request.getContextPath() + "/uploadFile/" + fileFullName;
+        urlStr="<a target='_blank' href='"+urlStr+"'>"+urlStr+"</a>";
         writer << urlStr;
     }
     Closure resourceFilePreview = { attrs ->

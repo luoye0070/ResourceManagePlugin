@@ -25,7 +25,7 @@ class ResourceFilesService {
             try {
                 maxSize=Long.parseLong(maxSizeStr);
             }catch (Exception ex){
-                ex.printStackTrace();
+                //ex.printStackTrace();
             }
         }
 

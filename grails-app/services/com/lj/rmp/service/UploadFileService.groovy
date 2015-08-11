@@ -2,6 +2,7 @@ package com.lj.rmp.service
 
 import com.lj.rmp.common.UploadFile
 import com.lj.rmp.enumcustom.ResourceType
+import com.lj.rmp.utils.ValidationCode
 
 
 class UploadFileService {
@@ -12,15 +13,19 @@ class UploadFileService {
         if (UploadFile.bootPath == "") {
             UploadFile.bootPath = webUtilForRmpService.getServletContext().getRealPath("/");
         }
-        //将文件名限定在64个字符内
-        Date now=new Date();
-
-        String nowStr=now.getTime()+"";
-        int nowStrLength=nowStr.length();
-        if (fileName.length() > (64-nowStrLength)) {
-            fileName = fileName.substring(fileName.length() - (64-nowStrLength));
+        //将汉字转换为拼音
+        //fileName= PinyinUtil.getPinYin(fileName);
+        //获取扩展名
+        String fileExt ="";
+        if(fileName.lastIndexOf(".")!=-1){
+            fileExt = fileName.substring(fileName.lastIndexOf(".")).toLowerCase();
         }
-        fileName=nowStr+fileName;
+        //文件名有时间加8位随机数组成
+        Date now=new Date();
+        String nowStr=now.getTime()+"";
+        String randStr= ValidationCode.getAuthCodeStr(8,ValidationCode.LAWERCASE_NUMBER);
+        fileName=nowStr+randStr+fileExt;
+
         BufferedInputStream bis = new BufferedInputStream(is);
         bis.mark(bis.available() + 1);
         //String fileFullName= UploadFile.uploadToYuPan(bis,fileName);

@@ -1,4 +1,4 @@
-<plugin name='resource-manage-plugin' version='0.1' grailsVersion='2.2 &gt; *'>
+<plugin name='resource-manage-plugin' version='0.2' grailsVersion='2.2 &gt; *'>
   <author>Your name</author>
   <title>Resource Manage Plugin Plugin</title>
   <description>Brief summary/description of the plugin.

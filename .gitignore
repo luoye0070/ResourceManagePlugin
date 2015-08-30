@@ -3,7 +3,6 @@ test/
 .idea/
 .classpath
 .project
-application.properties
 ResourceManagePlugin.iml
 ResourceManagePlugin-grailsPlugins.iml
 workspace.xml
